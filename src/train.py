@@ -38,6 +38,9 @@ def main(opt):
 
     os.environ['CUDA_VISIBLE_DEVICES'] = opt.gpus_str
     opt.device = torch.device('cuda' if opt.gpus[0] >= 0 else 'cpu')
+    
+    print(opt.gpus_str)
+    print(opt.device)
 
     print('Creating model...')
     model = create_model(opt.arch, opt.heads, opt.head_conv)
