@@ -96,7 +96,6 @@ def main(opt):
 
 
 if __name__ == '__main__':
-    #torch.cuda.set_device(0)
+    torch.cuda.set_device("0")
     opt = opts().parse()
-    opt.gpus_str = "0"
     main(opt)
