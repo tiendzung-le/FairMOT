@@ -76,6 +76,9 @@ def eval_seq(opt, dataloader, data_type, result_filename, save_dir=None, show_im
     frame_id = 0
     #for path, img, img0 in dataloader:
     for i, (path, img, img0) in enumerate(dataloader):
+        if i == 0:
+            print(img.shape, img0.shape)
+            
         #if i % 8 != 0:
             #continue
         if frame_id % 20 == 0:
